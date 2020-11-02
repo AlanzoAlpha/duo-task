@@ -15,7 +15,7 @@ pipeline {
         stage('run python scripts') {
             steps {
                 //Check container
-                sh 'docker ps -aq'
+                sh 'sudo docker ps -aq'
                 //sh 'sudo docker login'
                 //sh 'sudo docker push meallydavis/flask-app:1.0'
                 //Map registry port
