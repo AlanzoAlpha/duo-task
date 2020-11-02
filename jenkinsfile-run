@@ -12,14 +12,15 @@ pipeline {
                 
                 }
             }
-        //stage('run python scripts') {
-            //steps {
+        stage('run python scripts') {
+            steps {
                 //Check container
+                sh 'docker ps -aq'
                 //sh 'sudo docker login'
                 //sh 'sudo docker push meallydavis/flask-app:1.0'
-                // Map registry port
+                //Map registry port
                 //docker run -d -p 5000:5000 --name registry-duo registry
-           // }
+            }
        // stage('run python scripts') {
             //steps {
                 //Check container
