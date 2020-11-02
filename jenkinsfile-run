@@ -20,6 +20,7 @@ pipeline {
                 //sh 'sudo docker push meallydavis/flask-app:1.0'
                 //Map registry port
                 //docker run -d -p 5000:5000 --name registry-duo registry
+                }
             }
        // stage('run python scripts') {
             //steps {
