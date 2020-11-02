@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages{
+        stage('Create docker images'){
+            steps{
+                // Make the images
+                sh 'docker-compose up -d'
+                // Check images
+                sh 'doker images'
+                // Check containers
+                sh 'doker ps -a'
+                }
+            }
+        stage('run python scripts') {
+            steps {
+                // Map registry port
+                //docker run -d -p 5000:5000 --name registry-duo registry
+            }
+        }
+     }
+}
+
+//docker push registry-vm:5000/my/nginx
