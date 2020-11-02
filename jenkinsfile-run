@@ -7,12 +7,13 @@ pipeline {
                 sh 'docker-compose up -d'
                 // Check images
                 sh 'doker images'
-                // Check containers
-                sh 'doker ps -a'
+                
                 }
             }
         stage('run python scripts') {
             steps {
+                //Check container
+                sh 'doker ps -a'
                 // Map registry port
                 //docker run -d -p 5000:5000 --name registry-duo registry
             }
